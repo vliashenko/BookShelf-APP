@@ -1,0 +1,19 @@
+.bookItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    margin: 10px 0;
+}
+
+.bookImg {
+    width: 220px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.bookTitle {
+    margin: 5px 0;
+    text-align: center;
+}

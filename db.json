@@ -1,0 +1,66 @@
+{
+    "books" : [
+        {
+            "id": 1,
+            "imgUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/73/ab/2d/73ab2d4a-11ea-c1f1-d89b-4ad49739ed30/885767147904.jpg/600x600bf-60.jpg",
+            "title": "Holding Her Down",
+            "descr": "It is up to me to climb down at some other platform. Registering a fervent hope that there are no tunnels in the next half mile, I rise to my feet and walk down the train half a dozen cars. And let me say that one must leave timidity ...",
+            "genre": "poem",
+            "authorId": 1
+        },
+        {
+            "id": 2,
+            "imgUrl": "https://kbimages1-a.akamaihd.net/be0fd7f5-78ca-4dd5-ad9d-d21e12b728be/1200/1200/False/agile-web-development-with-rails-6.jpg",
+            "title": "Agile Web Development with Rails",
+            "descr": "Learn Rails the way the Rails core team recommends it, along with the tens of thousands of developers who have used this broad, far-reaching tutorial and reference. If you're new to Rails, you'll get step-by-step guidance. If you're an experienced developer, get the comprehensive, insider information you need for the latest version of Ruby on Rails. ",
+            "genre": "technology",
+            "authorId": 2
+        },
+        {
+            "id": 3,
+            "imgUrl": "https://miro.medium.com/proxy/1*l991xf7DtkUPeF5zCjlteg.jpeg",
+            "title": "Agile web development with rails: a Pragmatic guide",
+            "descr": "Rails is a full-stack, open source web framework that enables you to create full-featured, sophisticated web-based applications, but with a twist...",
+            "genre": "technology",
+            "authorId": 3
+        },
+        {
+            "id": 4,
+            "imgUrl": "https://www.packtpub.com/media/catalog/product/cache/4cdce5a811acc0d2926d7f857dceb83b/1/8/1847193897.jpg",
+            "title": "CakePHP Application Development",
+            "descr": "I bought this book based on the reviews here. It was the highest rated CakePHP book on Amazon at the time so I figured I couldn't go wrong. I was a little wrong about that...",
+            "genre": "technology",
+            "authorId": 4
+        },
+        {
+            "id": 5,
+            "imgUrl": "https://media.wiley.com/product_data/coverImage300/79/07645880/0764588079.jpg",
+            "title": "ASP.NET 2.0 Visual Web Developer 2005",
+            "descr": "This Starter Kit serves as an entry-level introduction centered around prebuilt projects that developers can easily deploy and customize for their own sites.",
+            "genre": "technology",
+            "authorId": 5
+        }
+    ],
+    "authors": [
+        {
+            "id": 1,
+            "name": "Jack London"
+        },
+        {
+            "id": 2,
+            "name": "Tobi McQuaire"
+        },
+        {
+            "id": 3,
+            "name": "Ernest Downsized"
+        },
+        {
+            "id": 4,
+            "name": "Apollo Mixin"
+        },
+        {
+            "id": 5,
+            "name": "Tits first of all"
+        }
+    ]
+}
