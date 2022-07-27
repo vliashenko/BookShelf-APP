@@ -1,6 +1,5 @@
-import { useState ,useEffect } from 'react';
+import useFetchBooks from "../hooks/useFetchBooks";
 import { Link } from "react-router-dom";
-import * as BookshelfAPI from "../services/bookshelf-api";
 import PageHeading from '../components/PageHeading/PageHeading';
 import Loader from '../components/Loader/Loader';
 import NotFoundView from "./NotFoundView";
@@ -9,16 +8,7 @@ import BooksItem from "../components/BooksItem/BooksItem";
 
 const BooksView = () => {
 
-    const [books, setBooks] = useState([]);
-    const [ status, setStatus] = useState('idle');
-
-    useEffect(() => {
-        setStatus("pending")
-        BookshelfAPI.fetchBooks()
-            .catch(setStatus('rejected'))
-            .then(setBooks)
-            .then(setStatus("resolved"))
-    },[])
+    const { books, status } = useFetchBooks();
 
     if(status === "idle") {
         return (
@@ -36,7 +26,7 @@ const BooksView = () => {
         return (
             <NotFoundView/>
         )
-    }
+    };
 
     if(status === "resolved" && books.length > 0) {
         return (

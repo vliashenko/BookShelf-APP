@@ -1,25 +1,12 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import useFetchBookById from '../hooks/useFetchBookById';
 import PageHeading from '../components/PageHeading/PageHeading';
 import BookCard from '../components/BookCard/BookCard';
 import Loader from '../components/Loader/Loader';
 import NotFoundView from './NotFoundView';
-import * as BookshelfAPI from "../services/bookshelf-api";
 
 const BookItemView = () => {
 
-    const [book, setBook] = useState(null);
-    const [status, setStatus] = useState("idle")
-    const params = useParams();
-    const bookId = params.id;
-
-    useEffect(() => {
-        setStatus("pending")    
-        BookshelfAPI.fetchBookById(bookId)
-            .catch(() =>setStatus("rejected"))
-            .then(setBook)
-            .then(setStatus("resolved"))
-    },[bookId])
+    const { book, status, bookId} = useFetchBookById()
 
     if(status === "pending" || status === "idle") {
         return (

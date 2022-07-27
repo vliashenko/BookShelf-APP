@@ -14,7 +14,7 @@
             "title": "Agile Web Development with Rails",
             "descr": "Learn Rails the way the Rails core team recommends it, along with the tens of thousands of developers who have used this broad, far-reaching tutorial and reference. If you're new to Rails, you'll get step-by-step guidance. If you're an experienced developer, get the comprehensive, insider information you need for the latest version of Ruby on Rails. ",
             "genre": "technology",
-            "authorId": 2
+            "authorId": 1
         },
         {
             "id": 3,
@@ -39,6 +39,14 @@
             "descr": "This Starter Kit serves as an entry-level introduction centered around prebuilt projects that developers can easily deploy and customize for their own sites.",
             "genre": "technology",
             "authorId": 5
+        },
+        {
+            "id": 6,
+            "imgUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1592250217l/51649796.jpg",
+            "title": "Learning React",
+            "descr": "If you want to learn how to build efficient user interfaces with React, this is your book. Authors Alex Banks and Eve Porcello show you how to create UIs with this small JavaScript library that can deftly display data changes on large-scale, data-driven websites without page reloads. Along the way, you'll learn how to work with functional programming and the latest ECMAScript features.Developed by Facebook, and used by companies including Netflix, Walmart, and The New York Times for large parts of their web interfaces, React is quickly growing in use. By learning how to build React components with this hands-on guide, you'll fully understand how useful React can be in your organization.",
+            "genre": "technology",
+            "authorId": 2
         }
     ],
     "authors": [
@@ -48,19 +56,19 @@
         },
         {
             "id": 2,
-            "name": "Tobi McQuaire"
+            "name": "Alex Banks"
         },
         {
             "id": 3,
-            "name": "Ernest Downsized"
+            "name": "David Heinemeter"
         },
         {
             "id": 4,
-            "name": "Apollo Mixin"
+            "name": "Ahsunal Bari"
         },
         {
             "id": 5,
-            "name": "Tits first of all"
+            "name": "Dawid Sussman"
         }
     ]
 }

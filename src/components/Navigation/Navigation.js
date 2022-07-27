@@ -29,6 +29,14 @@ const Navigation = () => {
             > 
                 Authors 
             </NavLink>   
+
+            <NavLink 
+                to="/table" 
+                className={styles.link} 
+                activeclassname={styles.activeLink}
+            > 
+                Table 
+            </NavLink> 
         </nav>
     );
 };

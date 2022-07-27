@@ -8,7 +8,7 @@ async function FetchWithErrorHandling( url = "", config = {} ) {
 }
 
 export function fetchAuthors() {
-    return FetchWithErrorHandling(`${BASE_URL}/authors?_embed-books`);
+    return FetchWithErrorHandling(`${BASE_URL}/authors?_embed=books`);
 };
 
 export function fetchBooks() {
