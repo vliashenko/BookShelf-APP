@@ -8,7 +8,7 @@ import BooksItem from "../components/BooksItem/BooksItem";
 
 const BooksView = () => {
 
-    const { books, status } = useFetchBooks();
+    const { books, status, location } = useFetchBooks();
 
     if(status === "idle") {
         return (
@@ -37,7 +37,11 @@ const BooksView = () => {
                     {books.map(book => {
                         const {id, ...allProp} = book
                         return (
-                            <Link key={id} to={`/books/${id}`}>
+                            <Link 
+                                key={id} 
+                                to={`/books/${id}`}
+                                state={{from: location}}
+                                >
                                 <BooksItem {...allProp}/>
                             </Link>
                         )

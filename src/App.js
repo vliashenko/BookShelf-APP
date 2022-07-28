@@ -1,13 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Appbar from "./components/Appbar/Appbar";
-// import HomeView from "./views/HomeView";
-// import AuthorView from "./views/AuthorView";
-// import BooksView from "./views/BooksView";
-// import NotFoundView from "./views/NotFoundView";
-// import BookItemView from "./views/BookItemView";
-// import AuthorSubView from "./views/AuthorSubView";
-// import TableView from "./views/TableView";
 import Loader from "./components/Loader/Loader";
 
 const HomeView = lazy(() => import("./views/HomeView" /*webpackChunkName: "home-view"*/));

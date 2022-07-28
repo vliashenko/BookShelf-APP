@@ -1,9 +1,11 @@
 import { useState ,useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 import * as BookshelfAPI from "../services/bookshelf-api";
 
 const useFetchBooks = () => {
     const [books, setBooks] = useState([]);
     const [ status, setStatus] = useState('idle');
+    const location = useLocation();
 
     useEffect(() => {
         setStatus("pending")
@@ -14,7 +16,7 @@ const useFetchBooks = () => {
     },[])
 
 
-    return {books, status}
+    return {books, status, location}
 };
 
 export default useFetchBooks;

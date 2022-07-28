@@ -1,8 +1,10 @@
-import { Link, useParams, useOutletContext } from "react-router-dom";
+import { Link, useParams, useOutletContext, useLocation } from "react-router-dom";
     
 const AuthorSubView = () => {
 
     const { authorId } = useParams();
+
+    const location = useLocation()
 
     const allAuthors = useOutletContext();
     const author = allAuthors.find(author => author.id === Number(authorId))
@@ -13,7 +15,11 @@ const AuthorSubView = () => {
 
             <ul>
                 {author.books.map(book => <li key={book.id}>
-                    <Link to={`/books/${book.id}`}>{book.title}</Link>
+                    <Link 
+                        to={`/books/${book.id}`}
+                        state={{from: location}}
+                    >
+                        {book.title}</Link>
                 </li>)}
             </ul>
         </div>
