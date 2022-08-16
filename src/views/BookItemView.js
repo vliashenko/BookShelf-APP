@@ -6,21 +6,21 @@ import NotFoundView from './NotFoundView';
 
 const BookItemView = () => {
 
-    const { book, status, bookId} = useFetchBookById()
+    const { book, isLoading, error, bookId} = useFetchBookById()
 
-    if(status === "pending" || status === "idle") {
+    if(isLoading) {
         return (
             <Loader/>
         )
     };
 
-    if(status === "rejected") {
+    if(error) {
         return (
             <NotFoundView/>
         )
     }
 
-    if(status === "resolved" && book) {
+    if(!error && book) {
         return (
             <>
                 <PageHeading title={`Book ${bookId}`}/>

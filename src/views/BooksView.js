@@ -8,27 +8,24 @@ import BooksItem from "../components/BooksItem/BooksItem";
 
 const BooksView = () => {
 
-    const { books, status, location } = useFetchBooks();
+    const { books,  error, isLoading, location } = useFetchBooks();
 
-    if(status === "idle") {
+    if(isLoading === true) {
         return (
-            <PageHeading title="Books"/>
+            <>
+                <PageHeading title="Books"/>
+                <Loader/>
+            </>
         )
     };
 
-    if(status === "pending") {
-        return (
-            <Loader/>
-        )
-    };
-
-    if(status === "rejected") {
+    if(error !== null) {
         return (
             <NotFoundView/>
         )
     };
 
-    if(status === "resolved" && books.length > 0) {
+    if(isLoading === false && books.length > 0) {
         return (
             <>
                 <PageHeading title="Books"/>

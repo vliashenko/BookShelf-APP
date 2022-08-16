@@ -1,24 +1,21 @@
-import { useState, useEffect } from 'react';
+import {  useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import * as BookshelfAPI from "../services/bookshelf-api";
-
+import { booksOperations, booksSelectors} from "../redux/books"
+import { useSelector, useDispatch } from 'react-redux';
 
 const useFetchBookById = () => {
-
-    const [book, setBook] = useState(null);
-    const [status, setStatus] = useState("idle")
+    const dispatch = useDispatch();
+    const book = useSelector(booksSelectors.getBook)
+    const isLoading = useSelector(booksSelectors.getIsLoading)
+    const error = useSelector(booksSelectors.getError)
     const params = useParams();
     const bookId = params.id;
 
     useEffect(() => {
-        setStatus("pending")    
-        BookshelfAPI.fetchBookById(bookId)
-            .catch(() =>setStatus("rejected"))
-            .then(setBook)
-            .then(setStatus("resolved"))
-    },[bookId])
+        dispatch(booksOperations.fetchBooksById(bookId))
+    },[bookId, dispatch])
 
-    return { book, status, bookId }
+    return { book, isLoading, error, bookId }
 };
 
 export default useFetchBookById;
